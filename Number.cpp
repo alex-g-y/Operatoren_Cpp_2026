@@ -20,10 +20,10 @@ public:
         return Real;
     }
 
-    int setRealNumber(int realNumber){
+    void setRealNumber(int realNumber){
         Real = realNumber;
     }
-    int setImgNumber (int imgnumber){
+    void setImgNumber (int imgnumber){
         Img = imgnumber;
     }
 };
