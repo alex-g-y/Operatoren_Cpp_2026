@@ -26,6 +26,22 @@ public:
     void setImgNumber (int imgnumber){
         Img = imgnumber;
     }
+
+    //equal operator =
+    bool operator==(ComplexNumber& other){
+       return Real = other.Real;
+    }
+
+    // Operatorr =+
+
+    ComplexNumber& operator+=( const ComplexNumber& cn){
+       Real += cn.Real;
+        return *this;
+    }
+
 };
 
-  //void operator =
+
+int main(){
+   std::cout <<"hello there!" <<std::endl;
+}
