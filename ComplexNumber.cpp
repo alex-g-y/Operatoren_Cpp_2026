@@ -22,14 +22,43 @@ class ComplexNumber
         return imgNumber;
     }
 
-    //------------------
 
-
-    bool operator<(const ComplexNumber& cn);
-
-    ComplexNumber& operator+=(int real);
 
     
+    /**
+     * Additionner les parties réelles entre elles et les parties imaginaires entre elles.
+     */
+     ComplexNumber& operator+=(const ComplexNumber& cn)
+    {
+
+    }
+
+    /**
+     * Soustraire les parties réelles et imaginaires correspondantes.
+     */
+    ComplexNumber& operator-=(const ComplexNumber& cn)
+    {
+
+    }
+
+    /**
+     * Multiplier deux nombres complexes et stocker le résultat dans l'objet courant.
+     */
+    ComplexNumber& operator*=(const ComplexNumber& cn)
+    {
+
+    }
+
+    /**
+     *  Diviser deux nombres complexes et stocker le résultat dans l'objet courant. Gérer la division par zéro.
+     */
+    ComplexNumber& operator/=(const ComplexNumber& cn)
+    {
+
+    }
+
+
+
 
     
 };
