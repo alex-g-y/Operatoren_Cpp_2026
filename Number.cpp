@@ -6,17 +6,17 @@
 
 class ComplexNumber{
 private:
-    int Real;  // real numbers
-    int Img; // imaginary numbers
+    double Real;  // real numbers
+    double Img; // imaginary numbers
 public:
     ComplexNumber(){}
     ComplexNumber(int real, int img): Real(real), Img(img){}
     // get method
-    int getRealNumber(){
+    double getRealNumber(){
         return Real;
     }
 
-    int getImgNumber(){
+    double getImgNumber(){
         return Img;
     }
 
@@ -32,15 +32,53 @@ public:
        return Real = other.Real;
     }
 
-    // Operatorr =+
+    // Operatorr +=
 
     ComplexNumber& operator+=( const ComplexNumber& cn){
        Real += cn.Real;
+       Img += cn.Img;
+        return *this;
+    }
+    // Operator *=
+    ComplexNumber& operator *=(const ComplexNumber& cn){
+        Real *= cn.Real;
+        Img *= cn.Img;
+        return *this;
+    }
+    //Operator /=
+    ComplexNumber& operator /=(const ComplexNumber& cn){
+        Real /= cn.Real;
+        Img /= cn.Img;
+        return *this;
+    }
+    ComplexNumber& operator -=(const ComplexNumber& cn){
+        Real -= cn.Real;
+        Img -= cn.Img;
         return *this;
     }
 
 };
 
+//operator +
+ComplexNumber operator+(ComplexNumber lhs, const ComplexNumber& rhs){
+    lhs += rhs;
+    return lhs;
+}
+// Operator *
+ComplexNumber operator*(ComplexNumber lhs, const ComplexNumber& rhs){
+    lhs *= rhs;
+    return lhs;
+}
+//Operator /
+ComplexNumber operator/(ComplexNumber lhs, const ComplexNumber& rhs){
+    lhs /= rhs;
+    return lhs;
+}
+// operator -
+ComplexNumber operator-(ComplexNumber lhs, const ComplexNumber& rhs){
+    lhs -= rhs;
+    return lhs;
+}
 
 int main(){
    std::cout <<"hello there!" <<std::endl;
